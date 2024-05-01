@@ -14,7 +14,7 @@
 This lib contains panasonic PLC use mewtocol via serial port.<br>
 `pip install regex`<br>
 `pip install pypanasonic`<br>
-`pip install serial`
+`pip install pyserial`
 # Usage
 Here is an example of using it.
 ````
