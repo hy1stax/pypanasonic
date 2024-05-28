@@ -66,5 +66,5 @@ def readDT(Start,End):
 
 # Send message to PLC, you could use that for plc connectection test.
 def plcVer():
-    return "%EE#RT00\r"
+    return "%EE#RT00**\r"
 

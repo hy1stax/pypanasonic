@@ -1,10 +1,5 @@
 # pypanasonic
 
-[![PyPI - Version](https://img.shields.io/pypi/v/pypanasonic.svg)](https://pypi.org/project/pypanasonic)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pypanasonic.svg)](https://pypi.org/project/pypanasonic)
-
------
-
 **Table of Contents**
 
 - [Installation](#installation)
@@ -31,7 +26,11 @@ ser = serial.Serial(port="COM3",
                     timeout=0.5)
 if ser.is_open:
     print("\n"+ser.name)
+
+    #Write the function here:
     write_len = ser.write(plcVer().encode('ascii'))
+    write_len = ser.write(switchSingleOn('R0001'))
+
     while True:
         com_message=ser.readline()
         if com_message:
@@ -44,5 +43,6 @@ else:
 ````
 
 ## License
+MIT
 
 `pypanasonic` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
